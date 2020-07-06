@@ -1,0 +1,54 @@
+# R and Python
+
+Some example R code
+
+```{r}
+head(mtcars)
+```
+
+```{r}
+lm(mpg ~ cyl, data=mtcars)
+```
+
+```{r}
+library(reticulate)
+```
+
+```{r}
+reticulate::conda_list()
+```
+
+```{r}
+reticulate::use_condaenv('db_covid19')
+```
+
+```{r}
+reticulate::py_config()
+```
+
+```{python}
+import seaborn as sns
+
+tips = sns.load_dataset('tips')
+```
+
+```{python}
+tips.head()
+```
+
+```{python}
+import matplotlib.pyplot as plt
+#g = sns.relplot(x="total_bill", y="tip", data=tips)
+```
+
+```{python}
+from sklearn.linear_model import LinearRegression
+
+reg = LinearRegression().fit(r.mtcars[['cyl', 'disp']],
+                             r.mtcars['mpg'])
+```
+
+```{python}
+reg.coef_
+```
+
